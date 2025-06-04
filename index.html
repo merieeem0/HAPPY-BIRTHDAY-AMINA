@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <title>Amina</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Step 1 -->
+  <div id="step1" class="section">
+    <h1>Hello baby girl, are u sure u want to open this?</h1>
+    <button onclick="step2('yes')">Yes</button>
+    <button onclick="step2('no')">No</button>
+  </div>
+
+  <!-- Sad1 -->
+  <div id="sad1" class="hidden">
+    <h1>You make me sad 💔</h1>
+  </div>
+
+  <!-- Birthday Greeting -->
+  <div id="birthday" class="hidden" >
+    <h1>🎉 Happy birthday, my sweet little star! 🎉</h1>
+    <button onclick="step3()">Next</button>
+  </div>
+
+  <!-- Step 3 -->
+  <div id="step3" class="hidden">
+    <h2>This is a small message from me to you... do you want to open it?</h2>
+    <button onclick="goToConfirmation()">Yes</button>
+    <button onclick="openMessage('no')">No</button>
+  </div>
+
+  <!-- Sad2 -->
+  <div id="sad2" class="hidden">
+    <h1>You make me sad 💔</h1>
+  </div>
+
+  <!-- Step 4: Are you sure? -->
+  <div id="step4" class="hidden">
+    <h2>Are you suuure?</h2>
+    <button onclick="showMessage('yes')">Yes</button>
+    <button onclick="showMessage('no')">No</button>
+  </div>
+
+  <!-- Final message -->
+  <div id="message" class="hidden">
+    <h2>
+      Happy birthday, Amina 💖<br>
+      I wish you a new year full of success and growth.<br>
+      Trust yourself and keep moving forward.<br>
+      Wishing you all the best in everything.<br>
+      I love you, my baby girl. 🎂✨
+    </h2>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
